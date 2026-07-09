@@ -1,0 +1,10 @@
+# Extra dependencies for the geospatial analyses (incident_hotspots.py,
+# station_coverage.py, svi_targeting.py). The core MCP server does NOT need these —
+# install only if you run these scripts:  pip install -r analysis/requirements.txt
+osmnx>=2.0
+folium>=0.16
+branca>=0.7
+geopandas>=1.0
+scikit-learn>=1.4
+h3>=4.0
+requests>=2.31

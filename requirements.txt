@@ -1,0 +1,19 @@
+# Root requirements — also what Streamlit Community Cloud installs when it deploys app/Home.py.
+# Must therefore cover the app's runtime, not just the MCP core.
+
+# First Due client + MCP server core
+mcp>=1.2.0
+requests>=2.31
+python-dotenv>=1.0
+
+# BRFD Command Suite (Streamlit app)
+streamlit>=1.40
+pandas>=2.0
+
+# Light geospatial deps so the hotspot / SVI / overlay maps can regenerate on a hosted deploy.
+# (Heavy deps for station coverage — osmnx, geopandas, scikit-learn — live in
+#  analysis/requirements.txt and run locally only; see DEPLOY.md.)
+folium>=0.16
+branca>=0.7
+h3>=4.0
+shapely>=2.0

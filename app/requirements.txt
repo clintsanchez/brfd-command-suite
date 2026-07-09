@@ -1,0 +1,6 @@
+# BRFD Command Suite app. Install the whole stack:
+#   pip install -r requirements.txt            (core: mcp, requests, python-dotenv)
+#   pip install -r analysis/requirements.txt   (geo/analysis: osmnx, folium, h3, ...)
+#   pip install -r app/requirements.txt        (this file)
+streamlit>=1.40
+pandas>=2.0
