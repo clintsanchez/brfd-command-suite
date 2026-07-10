@@ -31,6 +31,11 @@ BR_CORE = ["70801","70802","70805","70806","70807","70808","70809","70810","7081
 
 
 def main():
+    if not os.path.exists(CSV_PATH):
+        print("Community Connect export not found:\n  " + CSV_PATH +
+              "\n\nThis analysis needs the local smoke-alarm install CSV (resident PII — not in the "
+              "repo/cloud). Run it locally, or pass the path:  python smoke_alarm_gap.py <csv>")
+        return
     # 1. parse CSV -> per-ZIP request/status tallies
     by_zip = defaultdict(Counter); statuses = Counter(); total = 0
     with open(CSV_PATH, newline="", encoding="utf-8-sig") as f:
